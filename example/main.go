@@ -13,7 +13,7 @@ import (
 	"github.com/pocketbase/pocketbase"
 	"github.com/pocketbase/pocketbase/core"
 
-	"github.com/ponelat/pocketbase-mcp"
+	"github.com/clawjungle/pocketbase-mcp"
 )
 
 func main() {

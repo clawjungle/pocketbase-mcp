@@ -1,4 +1,4 @@
-module github.com/ponelat/pocketbase-mcp
+module github.com/clawjungle/pocketbase-mcp
 
 go 1.27.1
 

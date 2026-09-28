@@ -1,6 +1,6 @@
 module github.com/clawjungle/pocketbase-mcp
 
-go 1.27.1
+go 1.25.0
 
 require github.com/pocketbase/pocketbase v0.39.6
 

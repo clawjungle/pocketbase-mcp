@@ -59,6 +59,12 @@ func (s *Server) callTool(app core.App, auth *core.Record, params toolCallParams
 
 	text := ""
 	switch v := result.(type) {
+	case Result:
+		return v.toMap(), nil
+	case *Result:
+		if v != nil {
+			return v.toMap(), nil
+		}
 	case string:
 		text = v
 	case nil:

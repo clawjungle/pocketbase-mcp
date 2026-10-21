@@ -74,6 +74,20 @@ srv.AddTool(pbmcp.Tool{
 app.Start()
 ```
 
+A Handler's return value is JSON-encoded into one text block. To choose
+the content blocks yourself, for example to return an image the client
+shows the model as a picture, return a `pbmcp.Result`:
+
+```go
+return pbmcp.Result{Content: []pbmcp.Content{
+    pbmcp.Text("front door, resized to 1568px"),
+    pbmcp.Image(pngBytes, "image/png"),
+}}, nil
+```
+
+Set `IsError: true` on a `Result` to report a failure with your own
+content; returning an `error` still works as before.
+
 See `example/main.go` for a runnable demo app with two tools (`echo`,
 `whoami`). Run it with:
 
